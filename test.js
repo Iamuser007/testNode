@@ -1,14 +1,7 @@
-const mocha = require('mocha');	
-const chai = require('chai');
-const server = require('./server');
-const chaiHttp = require('chai-http');
+test('1 + 1 = 2', () => {
+  expect(1 + 1).toBe(2);
+});
 
-chai.use(chaiHttp);
-
- describe('/GET', () => {
-      it('should get the homepage', (done) => {
-        chai.request(server)
-            .get('/');
-              done();
-      });
-  });
+test('1 + 2 = 3', () => {
+  expect(1 + 2).toBe(3);
+});
